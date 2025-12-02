@@ -1,0 +1,13 @@
+name: pointnet
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch>=1.7.0
+  - numpy
+  - tqdm
+  - pip
+  - pip:
+    - plyfile
