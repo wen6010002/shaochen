@@ -60,6 +60,14 @@ if %errorlevel% neq 0 (
 echo Environment activated successfully!
 echo.
 
+REM Add MKL library paths to PATH to fix DLL loading issues
+echo Setting up MKL library paths...
+set "PATH=%CONDA_PREFIX%\Library\bin;%PATH%"
+set "PATH=%CONDA_PREFIX%\Library\mingw-w64\bin;%PATH%"
+set "PATH=%CONDA_PREFIX%\bin;%PATH%"
+echo [OK] Library paths configured
+echo.
+
 REM Change to utils directory
 cd pointnet.pytorch-master\utils
 
